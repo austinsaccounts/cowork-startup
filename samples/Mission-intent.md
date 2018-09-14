@@ -39,11 +39,20 @@ Sell our brand and image
 
 ###what are our requirements. what must the website always be doing?
 always be offering a way to contact us and return home.
-
+present information easily upon demand (ie pricing, location terms, etc)
 
 what are the wants
-tangible and intangibles
-branding
+ to invite our users in without rushing or force them we want to try and translate a real space feeling to a virtual experience.
+
+tangible
+logos, color scheme, fonts, navigation, content.
+
+intangibles
+relaxed non intrusive experience, ease of access, clarity of presentation.
+
+challenges
+presenting content clearly while avoiding 'corporate/generic styling'
+readable fonts that are also unique
 
 the best parts of all 3
 "livingroom - Dream office - Adult Playground"
