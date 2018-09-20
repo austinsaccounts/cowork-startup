@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "index.min.css",
+	"sources": [
+		"index.scss"
+	],
+	"sourcesContent": [
+		"//comment$font1\r\n$font1: blue;\r\n$bg-color1: blue;\r\n$fluff-color1: blue;\r\n\r\n.about-wrapper {\r\n  width: 300px;\r\n  background-color: red;\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AAKA,AAAA,cAAc,AAAC,CACb,KAAK,CAAE,KAAK,CACZ,gBAAgB,CAAE,GAAG,CACtB"
+}
