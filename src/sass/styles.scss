@@ -1,4 +1,4 @@
-$darkmagenta: #401d24;
+$darkmagenta: #853752;
 $pastelviolet: #cc8fa9;
 $pastelpink: #e095a2;
 $offwhite: #dedce9;
@@ -14,6 +14,16 @@ $funteal: #6e9995;
 $funpink: #ef3c79;
 
 $theme1: (
+bg-color: $pastelviolet,
+font-color: $funteal
+);
+
+$theme2: (
+bg-color: $funteal,
+font-color: $offblack
+
+);
+$theme3: (
 bg-color: $funpink,
 font-color: $funteal
 );
@@ -23,6 +33,9 @@ font-color: $funteal
   background-color:  map-get($theme, bg-color);
 }
 
-body {
-  @include colorswatch($theme1);
+#landing {
+  .header {
+    @include colorswatch($theme1);
+        
+  }
 }
