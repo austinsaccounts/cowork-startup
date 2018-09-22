@@ -14,6 +14,10 @@ $funteal: #6e9995;
 $funpink: #ef3c79;
 $western-font: 'Monoton', cursive;
 $playful-font: 'Yellowtail', cursive;
+$mobile-width: 767px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
 
 $theme1: (
 bg-color: $pastelviolet,
@@ -25,6 +29,7 @@ bg-color: $funteal,
 font-color: $offblack
 
 );
+
 $theme3: (
 bg-color: $darkmagenta,
 font-color: $funteal
@@ -36,15 +41,53 @@ font-color: $funteal
   background-color:  map-get($theme, bg-color);
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
 }
 
-* h1{
+@mixin tablet {
+  @media (min-width: #{$mobile-width +1px}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+body {
+  font-size: 16px;;
+}
+
+* {
+  padding: 1px;
+  margin: 1px;
+  border: 1px;
+  @include mobile {
+    font-size: 1rem;
+  }
+  @include tablet {
+    font-size: 1.4rem;
+  }
+  @include desktop {
+    font-size: 1.75rem;
+  }
+}
+
+.master-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
   color: inherit;
 }
+
 
 .header {
   h1 {
@@ -57,26 +100,48 @@ font-color: $funteal
   display: flex;
   flex-direction: row;
   flex: space-around;
+  width: auto;
   div {
     width: 33%;
     text-align: center;
   }
 }
 
-.content-link {
-  width: 100%;
-  text-align: center;
-
-  @include colorswatch($theme3);
+#landing {
+  display: flex;
+  flex-direction: column;
+  // width: 100%;
+  height: 100%;
+  .main-area {
+    height: 60vh;;
+    margin: 1;
   }
 
-#landing {
+  .wrapper {
+    flex: 1;
+  }
+
   .header {
     text-align: center;
     @include colorswatch($theme1);
+    }
+
+  .content-link {
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    @include colorswatch($theme3);
   }
+
   .footer-links {
     @include colorswatch($theme2)
 
+    max-height: 100px;
+    margin-bottom:1px;
   }
+
 }
+
+// body {
+//   background-image: url(../assets/images/room4-500.png);
+// };
